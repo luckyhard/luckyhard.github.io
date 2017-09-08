@@ -6,14 +6,18 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2017 | 董浩男的个人主页</title>
+  <title>董浩男的个人主页</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
+  <meta name="description" content="##1.红色圆圈内有一白色横线    警告：由于自己想将Ubuntu自带的Python2.7升级到3.6，但是在操作过程中将/usr/bin目录下原来的Python3.5额python3.5m 删除（我以为没用了，因为有了3.6和3.6m）。导致ubuntu底层使用python编写的部分可能，解释错误。 原因：在/usr/bin目录下有两个链接 python3 -&amp;gt; python3.5 和">
+<meta property="og:type" content="article">
 <meta property="og:title" content="董浩男的个人主页">
-<meta property="og:url" content="http://yoursite.com/archives/2017/index.html">
+<meta property="og:url" content="http://yoursite.com/2017/09/08/linux红色警告/index.html">
 <meta property="og:site_name" content="董浩男的个人主页">
+<meta property="og:description" content="##1.红色圆圈内有一白色横线    警告：由于自己想将Ubuntu自带的Python2.7升级到3.6，但是在操作过程中将/usr/bin目录下原来的Python3.5额python3.5m 删除（我以为没用了，因为有了3.6和3.6m）。导致ubuntu底层使用python编写的部分可能，解释错误。 原因：在/usr/bin目录下有两个链接 python3 -&amp;gt; python3.5 和">
+<meta property="og:updated_time" content="2017-09-08T14:01:50.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="董浩男的个人主页">
+<meta name="twitter:description" content="##1.红色圆圈内有一白色横线    警告：由于自己想将Ubuntu自带的Python2.7升级到3.6，但是在操作过程中将/usr/bin目录下原来的Python3.5额python3.5m 删除（我以为没用了，因为有了3.6和3.6m）。导致ubuntu底层使用python编写的部分可能，解释错误。 原因：在/usr/bin目录下有两个链接 python3 -&amp;gt; python3.5 和">
   
     <link rel="alternative" href="/atom.xml" title="董浩男的个人主页" type="application/atom+xml">
   
@@ -149,106 +153,146 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-linux红色警告" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>##1.红色圆圈内有一白色横线<br>    警告：由于自己想将Ubuntu自带的Python2.7升级到3.6，但是在操作过程中将/usr/bin目录下原来的Python3.5额python3.5m 删除（我以为没用了，因为有了3.6和3.6m）。导致ubuntu底层使用python编写的部分可能，解释错误。</p>
+<pre><code>原因：在/usr/bin目录下有两个链接 python3 -&gt; python3.5 和 python3m -&gt; python3.5m ，但是由于我误操作将python3.5 和 python3.5m删除了，找不到相应的链接，产生系统错误。
+
+解决：从别人电脑上有copy了这两个文件放大/usr/bin目录下，并且还要赋予这两个文件的可执行权限（chmod +x 文件名称）
+
+在经历了上述过程后还存在的问题是缺少包依赖，是关于Python的。后来使用命令 sudo apt-get install -f
+</code></pre>
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/09/08/linux红色警告/" class="archive-article-date">
-  	<time datetime="2017-09-08T14:03:16.413Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-08</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2017/09/08/linux红色警告/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/09/08/ubuntu中python2.7升级为3X/" class="archive-article-date">
-  	<time datetime="2017-09-08T14:03:13.455Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-08</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/09/08/ubuntu安装使用shadowsocks/" class="archive-article-date">
-  	<time datetime="2017-09-08T14:03:10.304Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-08</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
+<nav id="article-nav">
+  
+  
+    <a href="/2017/09/08/ubuntu中python2.7升级为3X/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title"></div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/09/08/eclipse下添加web插件/" class="archive-article-date">
-  	<time datetime="2017-09-08T12:32:25.294Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-08</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
 
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+        
+        
+    </div>
+</aside>
+
+
+
   
   
-    </div></section>
   
 
-    
+  
+
+  
+
+  
 
 
           </div>
@@ -271,8 +315,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

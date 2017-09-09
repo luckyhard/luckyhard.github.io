@@ -8,16 +8,16 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>个人主页</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="ubuntu安装hadoop2.7.3 安装jdk1.8.0 1.进入根目录下的usr文件夹: cd /usr  2.在usr下创建soft文件夹，用于存放hadoop和jdk等自己使用的软件: sudo mkdir soft  3.修改soft的权限，是所有人可以读写: sudo chmod a+w soft  4.移动jdk到 /usr/soft目录下: mv jdk/  /usr/soft/">
+  <meta name="description" content="##ubuntu安装hadoop2.7.3  ###安装jdk1.8.0 1.进入根目录下的usr文件夹: cd /usr  2.在usr下创建soft文件夹，用于存放hadoop和jdk等自己使用的软件: sudo mkdir soft  3.修改soft的权限，是所有人可以读写: sudo chmod a+w soft  4.移动jdk到 /usr/soft目录下: mv jdk/  /usr">
 <meta property="og:type" content="article">
 <meta property="og:title" content="个人主页">
 <meta property="og:url" content="http://yoursite.com/2017/09/08/安装hadoop2.7.3/index.html">
 <meta property="og:site_name" content="个人主页">
-<meta property="og:description" content="ubuntu安装hadoop2.7.3 安装jdk1.8.0 1.进入根目录下的usr文件夹: cd /usr  2.在usr下创建soft文件夹，用于存放hadoop和jdk等自己使用的软件: sudo mkdir soft  3.修改soft的权限，是所有人可以读写: sudo chmod a+w soft  4.移动jdk到 /usr/soft目录下: mv jdk/  /usr/soft/">
-<meta property="og:updated_time" content="2017-09-09T00:25:56.926Z">
+<meta property="og:description" content="##ubuntu安装hadoop2.7.3  ###安装jdk1.8.0 1.进入根目录下的usr文件夹: cd /usr  2.在usr下创建soft文件夹，用于存放hadoop和jdk等自己使用的软件: sudo mkdir soft  3.修改soft的权限，是所有人可以读写: sudo chmod a+w soft  4.移动jdk到 /usr/soft目录下: mv jdk/  /usr">
+<meta property="og:updated_time" content="2017-09-09T01:03:24.326Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="个人主页">
-<meta name="twitter:description" content="ubuntu安装hadoop2.7.3 安装jdk1.8.0 1.进入根目录下的usr文件夹: cd /usr  2.在usr下创建soft文件夹，用于存放hadoop和jdk等自己使用的软件: sudo mkdir soft  3.修改soft的权限，是所有人可以读写: sudo chmod a+w soft  4.移动jdk到 /usr/soft目录下: mv jdk/  /usr/soft/">
+<meta name="twitter:description" content="##ubuntu安装hadoop2.7.3  ###安装jdk1.8.0 1.进入根目录下的usr文件夹: cd /usr  2.在usr下创建soft文件夹，用于存放hadoop和jdk等自己使用的软件: sudo mkdir soft  3.修改soft的权限，是所有人可以读写: sudo chmod a+w soft  4.移动jdk到 /usr/soft目录下: mv jdk/  /usr">
   
     <link rel="alternative" href="/atom.xml" title="个人主页" type="application/atom+xml">
   
@@ -146,8 +146,9 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <pre><code>ubuntu安装hadoop2.7.3
-安装jdk1.8.0
+        <pre><code>##ubuntu安装hadoop2.7.3
+
+###安装jdk1.8.0
 1.进入根目录下的usr文件夹:
 cd /usr
 
@@ -177,7 +178,7 @@ echo $JAVA_HOME    会输出刚才配置的路径
 
 9.java -version验证是否输出jdk信息
 
-安装hadoop2.7.3
+##安装hadoop2.7.3
 1.将hadoop压缩包复制到 /usr/soft下
 sudo cp hadoop /usr/soft
 
@@ -240,7 +241,7 @@ gedit *-site.xml(其中会打开一个不配置的文件，关闭即可)
     &lt;value&gt;yarn&lt;/value&gt;
 &lt;/property&gt;
 
-配置ssh
+##配置ssh
 1.安装ssh
 sudo apt-get install ssh
 

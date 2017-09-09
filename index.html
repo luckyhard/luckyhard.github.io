@@ -202,67 +202,6 @@
 
 
   
-    <article id="post-ubuntu设置eclipse作为启动命令" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <pre><code>###将eclipse作为命令执行，启动eclipse
-
-1.进入/usr/local/bin 特意为本地用户设置自定义命令使用
-
-2.进入bin里面是空的，设置软连接命令
-
-3.ln -s /usr/soft/eclipse/eclipse(eclipse可执行文件的路径) eclipse(启动命令)
-
-4.设置完成之后，输入eclipse(使用tab键可以自动补全)启动。
-
-原因:
-在usr目录下，输入echo $PATH命令，里面有关于/usr/local/bin的配置。
-linux命令会在PATH配置的一系列命令下查找相关命令，所以当在bin里面配置符号链接后，再输入eclipse
-命令会在PATH配置下找到，并通过连接启动eclipse
-</code></pre>
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/09/08/ubuntu设置eclipse作为启动命令/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
     <article id="post-安装hadoop2.7.3" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -384,6 +323,67 @@ cat id_rsa.pub &gt;&gt;authorized_keys
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2017/09/08/安装hadoop2.7.3/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-ubuntu设置eclipse作为启动命令" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <pre><code>###将eclipse作为命令执行，启动eclipse
+
+1.进入/usr/local/bin 特意为本地用户设置自定义命令使用
+
+2.进入bin里面是空的，设置软连接命令
+
+3.ln -s /usr/soft/eclipse/eclipse(eclipse可执行文件的路径) eclipse(启动命令)
+
+4.设置完成之后，输入eclipse(使用tab键可以自动补全)启动。
+
+原因:
+在usr目录下，输入echo $PATH命令，里面有关于/usr/local/bin的配置。
+linux命令会在PATH配置的一系列命令下查找相关命令，所以当在bin里面配置符号链接后，再输入eclipse
+命令会在PATH配置下找到，并通过连接启动eclipse
+</code></pre>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/09/08/ubuntu设置eclipse作为启动命令/">展开全文 >></a>
         </p>
       
 

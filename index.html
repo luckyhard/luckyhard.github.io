@@ -192,19 +192,11 @@
       
         <h1 id="hadoop整合eclipse"><a href="#hadoop整合eclipse" class="headerlink" title="hadoop整合eclipse "></a>hadoop整合eclipse </h1><pre><code>1.下载hadoop-eclipse-plugin的jar包，与自己使用的hadoop的版本一致。
 例如hadoop-eclipse-plugin-2.7.3
-2.将hadoop-eclipse-plugin拷贝到eclipse/plugins下即可
-
-3.重新打开eclipse在window-&gt;preferences下会有Hadoop Map/Reduce选项，点击配置hadoop的
-安装路径即可。
-
-4.在Window-&gt;show view-&gt;other 中找到MapReduce Tools下点击Map/Reduce Locations在下方视图
-区域出现Map/Reduce Locations
-
-5.选中Map/Reduce Locations在视图的右上方有一个蓝色小象，点击进去配置hadoop端口
-
-6.先输入一个名字(任意)，再配置端口。左侧端口为mapred-site.xml中配置的Map/Reduce端口，没有
-配置则默认为8021 右侧端口为core-site.xml中配置的端口
-</code></pre>
+</code></pre><ul>
+<li>
+        
+          <a class="article-more-a" href="/2017/09/08/hadoop整合eclipse/#more">more >></a>
+        
       
 
       
@@ -251,19 +243,14 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="将eclipse作为命令执行，启动eclipse"><a href="#将eclipse作为命令执行，启动eclipse" class="headerlink" title="将eclipse作为命令执行，启动eclipse"></a>将eclipse作为命令执行，启动eclipse</h2><pre><code>1.进入/usr/local/bin 特意为本地用户设置自定义命令使用
+        <h1 id="将eclipse作为命令执行，启动eclipse"><a href="#将eclipse作为命令执行，启动eclipse" class="headerlink" title="将eclipse作为命令执行，启动eclipse"></a>将eclipse作为命令执行，启动eclipse</h1><pre><code>1.进入/usr/local/bin 特意为本地用户设置自定义命令使用
 
 2.进入bin里面是空的，设置软连接命令
-
-3.ln -s /usr/soft/eclipse/eclipse(eclipse可执行文件的路径) eclipse(启动命令)
-
-4.设置完成之后，输入eclipse(使用tab键可以自动补全)启动。
-
-原因:
-在usr目录下，输入echo $PATH命令，里面有关于/usr/local/bin的配置。
-linux命令会在PATH配置的一系列命令下查找相关命令，所以当在bin里面配置符号链接后，再输入eclipse
-命令会在PATH配置下找到，并通过连接启动eclipse
-</code></pre>
+</code></pre><ul>
+<li>
+        
+          <a class="article-more-a" href="/2017/09/08/ubuntu设置eclipse作为启动命令/#more">more >></a>
+        
       
 
       
@@ -310,102 +297,14 @@ linux命令会在PATH配置的一系列命令下查找相关命令，所以当�
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="ubuntu安装hadoop2-7-3"><a href="#ubuntu安装hadoop2-7-3" class="headerlink" title="ubuntu安装hadoop2.7.3"></a>ubuntu安装hadoop2.7.3</h2><p>###安装jdk1.8.0  ###<br>    1.进入根目录下的usr文件夹:<br>    cd /usr</p>
+        <h1 id="ubuntu安装hadoop2-7-3"><a href="#ubuntu安装hadoop2-7-3" class="headerlink" title="ubuntu安装hadoop2.7.3"></a>ubuntu安装hadoop2.7.3</h1><p>###安装jdk1.8.0  ###<br>    1.进入根目录下的usr文件夹:<br>    cd /usr</p>
 <pre><code>2.在usr下创建soft文件夹，用于存放hadoop和jdk等自己使用的软件:
 sudo mkdir soft
-
-3.修改soft的权限，是所有人可以读写:
-sudo chmod a+w soft
-
-4.移动jdk到 /usr/soft目录下:
-mv jdk/  /usr/soft/
-
-5.进入jdk/bin目录下，下面全是可执行文件。
-
-6.在/etc/environment中配置JAVA_HOME环境变量:
-cd /etc
-sudo nano environment
-环境变量
-JAVA_HOME= jdk安装路径    JAVA_HOME=/usr/soft/jdk1.8.0_121
-PATH变量后面添加bin路径      PATH=&quot;/usr/soft/jdk1.8.0_121/bin:&quot;
-
-7.是配置的environment文档立即生效
-source environment
-
-8.验证是否立即生效
-echo $JAVA_HOME    会输出刚才配置的路径
-
-9.java -version验证是否输出jdk信息
-</code></pre><h3 id="安装hadoop2-7-3"><a href="#安装hadoop2-7-3" class="headerlink" title="安装hadoop2.7.3"></a>安装hadoop2.7.3</h3><pre><code>1.将hadoop压缩包复制到 /usr/soft下
-sudo cp hadoop /usr/soft
-
-2.解压hadoop压缩包
-tar -xzvf hadoop
-
-3.在etc/environment中配置hadoop变量
-gedit environment (是有ubuntu自带的图形编辑器)
-配置变量
-HADOOP_INSTALL=/usr/soft/hadoop-2.7.3
-在PATH中追加hadoop的bin目录和sbin目录
-/usr/soft/hadoop-2.7.3/bin:/usr/soft/hadoop-2.7.3/sbin
-即可生效
-source environment
-
-4.需要重启一次，重启完成后
-hadoop version验证是否输出hadoop信息
-
-5.开始配置:进入 /hadoop/etc/hadoop，需要配置core-site.xml,yarn-site.xml,hdfs-site.xml
-以及mapred-site.xml
-
-6.使用命令群编辑文件
-gedit *-site.xml(其中会打开一个不配置的文件，关闭即可)
-
-7.首先配置core-site.xml,在configuration标签内配置
-&lt;property&gt;
-    &lt;name&gt;fs.defaultFS&lt;/name&gt;
-    &lt;value&gt;hdfs://localhost/&lt;/value&gt;
-&lt;/property&gt;
-
-8.配置hdfs-site.xml
-&lt;property&gt;
-    &lt;name&gt;dfs.replication&lt;/name&gt;
-    &lt;value&gt;1&lt;/value&gt;
-&lt;/property&gt;
-&lt;property&gt;
-    &lt;name&gt;&lt;property&gt;
-    &lt;name&gt;fs.defaultFS&lt;/name&gt;
-    &lt;value&gt;hdfs://localhost/&lt;/value&gt;
-&lt;/property&gt;dfs.namenode.name.dir&lt;/name&gt;
-    &lt;value&gt;/usr/soft/NameNodeFile&lt;/value&gt;
-&lt;/property&gt;
-
-9.配置yarn-site.xml
-
-&lt;/property&gt;
-    &lt;name&gt;yarn.resourcemanager.address&lt;/name&gt;
-    &lt;value&gt;localhost&lt;/value&gt;
-&lt;/property&gt;
-
-&lt;/property&gt;
-    &lt;name&gt;yarn.nodemanager.aux-services&lt;/name&gt;
-    &lt;value&gt;mapreduce_shuffle&lt;/value&gt;
-&lt;/property&gt;
-
-10.配置mapred-site.xml,需要将mapred-site.xml.template 复制一份为 mapred-site.xml
-
-&lt;/property&gt;
-    &lt;name&gt;mapreduce.framework.name&lt;/name&gt;
-    &lt;value&gt;yarn&lt;/value&gt;
-&lt;/property&gt;
-</code></pre><h3 id="配置ssh"><a href="#配置ssh" class="headerlink" title="配置ssh"></a>配置ssh</h3><pre><code>1.安装ssh
-sudo apt-get install ssh
-
-2.进入主目录下 cd /
-ssh -keygen -t rsa -P &apos;&apos; -f ~/.ssh/id_rsa
-
-3.配置密钥
-cat id_rsa.pub &gt;&gt;authorized_keys
-</code></pre>
+</code></pre><ul>
+<li>
+        
+          <a class="article-more-a" href="/2017/09/08/安装hadoop2.7.3/#more">more >></a>
+        
       
 
       
@@ -452,14 +351,12 @@ cat id_rsa.pub &gt;&gt;authorized_keys
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="ubuntu红色警告"><a href="#ubuntu红色警告" class="headerlink" title="ubuntu红色警告"></a>ubuntu红色警告</h2><pre><code>警告：由于自己想将Ubuntu自带的Python2.7升级到3.6，但是在操作过程中将/usr/bin目录下原来的Python3.5额python3.5m 删除（我以为没用了，因为有了3.6和3.6m）。导致ubuntu底层使用python编写的部分可能，解释错误。
-
-原因：在/usr/bin目录下有两个链接 python3 -&gt; python3.5 和 python3m -&gt; python3.5m ，但是由于我误操作将python3.5 和 python3.5m删除了，找不到相应的链接，产生系统错误。
-
-解决：从别人电脑上有copy了这两个文件放大/usr/bin目录下，并且还要赋予这两个文件的可执行权限（chmod +x 文件名称）
-
-在经历了上述过程后还存在的问题是缺少包依赖，是关于Python的。后来使用命令 sudo apt-get install -f
-</code></pre>
+        <h1 id="ubuntu红色警告"><a href="#ubuntu红色警告" class="headerlink" title="ubuntu红色警告"></a>ubuntu红色警告</h1><pre><code>警告：由于自己想将Ubuntu自带的Python2.7升级到3.6，但是在操作过程中将/usr/bin目录下原来的Python3.5额python3.5m 删除（我以为没用了，因为有了3.6和3.6m）。导致ubuntu底层使用python编写的部分可能，解释错误。
+</code></pre><ul>
+<li>
+        
+          <a class="article-more-a" href="/2017/09/08/linux红色警告/#more">more >></a>
+        
       
 
       
@@ -506,14 +403,15 @@ cat id_rsa.pub &gt;&gt;authorized_keys
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="ubuntu中python2-7升级到3X"><a href="#ubuntu中python2-7升级到3X" class="headerlink" title="ubuntu中python2.7升级到3X"></a>ubuntu中python2.7升级到3X</h2><pre><code>1.sudo apt-get install python3.6
+        <h1 id="ubuntu中python2-7升级到3X"><a href="#ubuntu中python2-7升级到3X" class="headerlink" title="ubuntu中python2.7升级到3X"></a>ubuntu中python2.7升级到3X</h1><pre><code>1.sudo apt-get install python3.6
 如果没有找到python3.6,则添加如下软件源
 sudo add-apt-repository ppa:jonathonf/python-3.6
 sudo apt-get update
-
-2.sudo rm/usr/bin/python 移除ubuntu下默认的python版本
-sudo ln -s /usr/bin/python3.6 /usr/bin/python     建立默认python 与 现在安装pytnon3.6的连接
-</code></pre>
+</code></pre><ul>
+<li>
+        
+          <a class="article-more-a" href="/2017/09/08/ubuntu中python2.7升级为3X/#more">more >></a>
+        
       
 
       
@@ -560,21 +458,18 @@ sudo ln -s /usr/bin/python3.6 /usr/bin/python     建立默认python 与 现在�
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="ubuntu使用shadowsocks"><a href="#ubuntu使用shadowsocks" class="headerlink" title="ubuntu使用shadowsocks"></a>ubuntu使用shadowsocks</h2><pre><code>1.安装，输入一下命令安装shadow socks
+        <h1 id="ubuntu使用shadowsocks"><a href="#ubuntu使用shadowsocks" class="headerlink" title="ubuntu使用shadowsocks"></a>ubuntu使用shadowsocks</h1><pre><code>1.安装，输入一下命令安装shadow socks
 
 sudo add-apt-repository ppa:hzwhuang/ss-qt5
 
 sudo apt-get update
 
 sudo apt-get install shadowsocks-qt5
-
-2.配置打开shadow socks
-在菜单栏-&gt;连接-&gt;添加-&gt;自json
-
-3.在菜单栏 -&gt;文件-&gt;导入连接即可
-
-4.还需要配置浏览器的代理服务
-</code></pre>
+</code></pre><ul>
+<li>
+        
+          <a class="article-more-a" href="/2017/09/08/ubuntu安装使用shadowsocks/#more">more >></a>
+        
       
 
       
@@ -622,12 +517,11 @@ sudo apt-get install shadowsocks-qt5
     <div class="article-entry" itemprop="articleBody">
       
         <h1 id="碰到eclipse下没有web项目"><a href="#碰到eclipse下没有web项目" class="headerlink" title="碰到eclipse下没有web项目"></a>碰到eclipse下没有web项目</h1><pre><code>(1)在菜单栏Help下选择install software选项进入如下界面
-</code></pre><p><img src="/./img/eclipse1.png" alt="Alt text"></p>
-<pre><code>(2)在work with下拉框中选择一个网址，下面会显示可以下载的插件。网址不同可以下载的插件不同(网址也可以自己添加)
-</code></pre><p><img src="/./img/eclipse2.png" alt="Alt text"></p>
-<pre><code>(3)如上图选择的关于WEB插件的下载，具体下载插件的名字最好上网查看一下，以防下载错误。
-(4)选择好之后next就好
-</code></pre>
+</code></pre><ul>
+<li>
+        
+          <a class="article-more-a" href="/2017/09/08/eclipse下添加web插件/#more">more >></a>
+        
       
 
       

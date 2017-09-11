@@ -14,7 +14,7 @@
 <meta property="og:url" content="http://yoursite.com/2017/09/08/ubuntu设置eclipse作为启动命令/index.html">
 <meta property="og:site_name" content="个人主页">
 <meta property="og:description" content="title: 将eclipse作为命令执行，启动eclipse1.进入/usr/local/bin 特意为本地用户设置自定义命令使用  2.进入bin里面是空的，设置软连接命令">
-<meta property="og:updated_time" content="2017-09-11T02:41:44.780Z">
+<meta property="og:updated_time" content="2017-09-11T02:46:09.713Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="个人主页">
 <meta name="twitter:description" content="title: 将eclipse作为命令执行，启动eclipse1.进入/usr/local/bin 特意为本地用户设置自定义命令使用  2.进入bin里面是空的，设置软连接命令">
@@ -146,8 +146,8 @@
 2.进入bin里面是空的，设置软连接命令
 </code></pre><ul>
 <li><a id="more"></a>    
-<p>  3.ln -s /usr/soft/eclipse/eclipse(eclipse可执行文件的路径) eclipse(启动命令)</p>
-<p>  4.设置完成之后，输入eclipse(使用tab键可以自动补全)启动。</p>
+<p>   3.ln -s /usr/soft/eclipse/eclipse(eclipse可执行文件的路径) eclipse(启动命令)</p>
+<p>   4.设置完成之后，输入eclipse(使用tab键可以自动补全)启动。</p>
 <p>  原因:<br>  在usr目录下，输入echo $PATH命令，里面有关于/usr/local/bin的配置。<br>  linux命令会在PATH配置的一系列命令下查找相关命令，所以当在bin里面配置符号链接后，再输入eclipse<br>  命令会在PATH配置下找到，并通过连接启动eclipse</p>
 </li>
 </ul>

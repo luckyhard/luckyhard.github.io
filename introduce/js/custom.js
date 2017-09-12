@@ -10,9 +10,9 @@ $(window).load(function(){
 $(function(){
     jQuery(document).ready(function() {
 		$('body').backstretch([
-	 		 "F:/git/blog/public/introduce/images/tm-bg-slide-1.jpg", 
-	 		 "F:/git/blog/public/introduce/images/tm-bg-slide-2.jpg",
-			 "F:/git/blog/public/introduce/images/tm-bg-slide-3.jpg"
+	 		 "https://github.com/luckyhard/luckyhard.github.io/tree/master/introduce/images/tm-bg-slide-1.jpg", 
+	 		 "https://github.com/luckyhard/luckyhard.github.io/tree/master/introduce/images/tm-bg-slide-2.jpg",
+			 "https://github.com/luckyhard/luckyhard.github.io/tree/master/introduce/images/tm-bg-slide-3.jpg"
 	 			], 	{duration: 3200, fade: 1300});
 		});
 })
